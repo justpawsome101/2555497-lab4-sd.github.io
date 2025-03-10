@@ -54,3 +54,13 @@ function clearDisplay() {
     document.getElementById('country-details').innerHTML = '';
     document.getElementById('neighboring-countries').innerHTML = '';
 }
+
+function displayNeighboringCountries(neighboringCountries) {
+    const neighboringCountriesDiv = document.getElementById('neighboring-countries');
+    neighboringCountriesDiv.innerHTML = neighboringCountries.map(country => `
+        <div class="country-card">
+            <img src="${country.flags.png}" alt="${country.name.common} Flag">
+            <h3>${country.name.common}</h3>
+        </div>
+    `).join('');
+}
