@@ -30,37 +30,27 @@ document.getElementById('submit-btn').addEventListener('click', function() {
 function displayCountryInfo(country) {
     const countryDetails = document.getElementById('country-details');
     countryDetails.innerHTML = `
-        <div class="country-card">
+        <article>
             <img src="${country.flags.png}" alt="${country.name.common} Flag">
             <h3>${country.name.common}</h3>
             <p><strong>Capital:</strong> ${country.capital}</p>
             <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
             <p><strong>Region:</strong> ${country.region}</p>
-        </div>
+        </article>
     `;
 }
 
 function displayNeighboringCountries(neighboringCountries) {
-    const neighboringCountriesDiv = document.getElementById('neighboring-countries');
-    neighboringCountriesDiv.innerHTML = neighboringCountries.map(country => `
-        <div class="country-card">
+    const neighboringCountriesSection = document.getElementById('neighboring-countries');
+    neighboringCountriesSection.innerHTML = neighboringCountries.map(country => `
+        <article>
             <img src="${country.flags.png}" alt="${country.name.common} Flag">
             <h3>${country.name.common}</h3>
-        </div>
+        </article>
     `).join('');
 }
 
 function clearDisplay() {
     document.getElementById('country-details').innerHTML = '';
     document.getElementById('neighboring-countries').innerHTML = '';
-}
-
-function displayNeighboringCountries(neighboringCountries) {
-    const neighboringCountriesDiv = document.getElementById('neighboring-countries');
-    neighboringCountriesDiv.innerHTML = neighboringCountries.map(country => `
-        <div class="country-card">
-            <img src="${country.flags.png}" alt="${country.name.common} Flag">
-            <h3>${country.name.common}</h3>
-        </div>
-    `).join('');
 }
