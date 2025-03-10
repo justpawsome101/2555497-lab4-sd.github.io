@@ -1,1 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #121212; 
+    color: #e0e0e0;
+}
 
+h1, h2 {
+    color: #ffffff; 
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    background-color: #1e1e1e; 
+    color: #e0e0e0; 
+    border: 1px solid #333; 
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+#country-info, #bordering-countries {
+    margin-top: 20px;
+}
+
+#country-details, #neighboring-countries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.country-card {
+    background-color: #1e1e1e; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    width: 200px;
+    text-align: center;
+    border: 1px solid #333;
+
+.country-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px; 
+}
+
+
+.error-message {
+    color: #ff6b6b; 
+    font-weight: bold;
+    margin-top: 20px;
+}
